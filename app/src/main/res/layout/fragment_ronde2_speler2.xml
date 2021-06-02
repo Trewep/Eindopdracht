@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ronde1Speler1">
+    tools:context=".ronde1Speler2">
 
     <TextView
         android:id="@+id/tv_letter"
@@ -51,7 +51,7 @@
         android:id="@+id/ronde"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ronde 1"
+        android:text="Ronde 2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
@@ -62,25 +62,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Speler 1"
+        android:text="Speler 2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ronde"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/andwoordSpeler1"
+        android:id="@+id/andwoordSpeler2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginBottom="140dp"
         android:text="Antwoord"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/eTAntwoordR1S1"
+        android:id="@+id/eTAntwoordR1S2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -89,7 +89,7 @@
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/andwoordSpeler1"
+        app:layout_constraintStart_toEndOf="@+id/andwoordSpeler2"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
