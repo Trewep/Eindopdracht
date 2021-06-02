@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ public class ronde1Speler1 extends Fragment {
     GameViewModel viewModel;
     Button btnVowel;
     Button btnConsonant;
+
 
     public ronde1Speler1() {
         // Required empty public constructor
