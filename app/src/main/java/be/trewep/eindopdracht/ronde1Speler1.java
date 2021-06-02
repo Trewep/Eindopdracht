@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class ronde1Speler1 extends Fragment {
@@ -17,6 +18,10 @@ public class ronde1Speler1 extends Fragment {
     GameViewModel viewModel;
     Button btnVowel;
     Button btnConsonant;
+    EditText mEditTextRS1;
+    TextView mTextViewResult;
+    Button mButtonSend;;
+
 
 
     public ronde1Speler1() {
@@ -25,6 +30,23 @@ public class ronde1Speler1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_ronde1_speler1, container, false);
+
+        mEditTextRS1 = v.findViewById(R.id.AnswerR1S1);
+        mTextViewResult = v.findViewById(R.id.tv_AnswerR1S1);
+        mButtonSend = v.findViewById(R.id.btn_send);
+
+        mButtonSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mEditTextRS1.getText().toString().length() == 0){
+                    mEditTextRS1.setText("Anwser");
+                }
+                String word1 = mEditTextRS1.getText().toString();
+
+                mTextViewResult.setText(word1);
+
+            }
+        });
 
         tvLetter = v.findViewById(R.id.tv_letter);
 
