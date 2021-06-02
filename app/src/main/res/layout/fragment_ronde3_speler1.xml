@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ronde1Speler1">
+    tools:context=".ronde3Speler1">
+
 
     <TextView
-        android:id="@+id/tv_letter"
+        android:id="@+id/tv_numberInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
@@ -16,42 +18,54 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_consonant"
-        app:layout_constraintVertical_bias="0.229" />
 
-    <Button
-        android:id="@+id/btn_consonant"
+        app:layout_constraintTop_toBottomOf="@+id/btn_SmallNumber"
+        app:layout_constraintVertical_bias="0.225" />
+
+    <TextView
+        android:id="@+id/tv_numberGoal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Consonant"
+        android:text=""
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speler2"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <Button
+        android:id="@+id/btn_BigNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Big #"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/btn_vowel"
+        app:layout_constraintStart_toEndOf="@+id/btn_SmallNumber"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
-        android:backgroundTint="#D00101"
-        />
+        android:backgroundTint="#D00101"/>
 
     <Button
-        android:id="@+id/btn_vowel"
+        android:id="@+id/btn_SmallNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Vowel"
+        android:text="Small #"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_consonant"
+        app:layout_constraintEnd_toStartOf="@+id/btn_BigNumber"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5"
-        android:backgroundTint="#D00101"
-        />
+        android:backgroundTint="#D00101"/>
 
     <TextView
         android:id="@+id/ronde"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ronde 2"
+        android:text="Ronde 3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints"
@@ -69,18 +83,18 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/andwoordSpeler1"
+        android:id="@+id/andwoordSpeler2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginBottom="148dp"
+        android:layout_marginBottom="140dp"
         android:text="Antwoord"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/eTAntwoordR1S1"
+        android:id="@+id/eTAntwoordR1S2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -89,7 +103,7 @@
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/andwoordSpeler1"
+        app:layout_constraintStart_toEndOf="@+id/andwoordSpeler2"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

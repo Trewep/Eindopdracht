@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -43,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
         btnChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Log.d("currentLayout", String.valueOf(currentLayout));
+                Log.d("r1s1", String.valueOf(ronde1Speler1));
+                Log.d("r1s2", String.valueOf(ronde1Speler2));
                 if (currentLayout == ronde1Speler1) {
                     currentLayout = ronde1Speler2;
                 }else if (currentLayout == ronde1Speler2){

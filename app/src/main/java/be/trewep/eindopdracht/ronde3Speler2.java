@@ -11,34 +11,39 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 public class ronde3Speler2 extends Fragment {
-    TextView tvLetter;
+    TextView tvNumberInput;
+    TextView tvNumberGoal;
+
     GameViewModel viewModel;
-    Button btnVowel;
-    Button btnConsonant;
+
+    Button btnBigNumber;
+    Button btnSmallNumber;
 
     public ronde3Speler2() {
         // Required empty public constructor
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_ronde1_speler1, container, false);
+        View v = inflater.inflate(R.layout.fragment_ronde3_speler2, container, false);
 
-        tvLetter = v.findViewById(R.id.tv_letter);
+        tvNumberInput = v.findViewById(R.id.tv_numberInput);
+        tvNumberGoal = v.findViewById(R.id.tv_numberGoal);
+        btnBigNumber = v.findViewById(R.id.btn_BigNumber);
+        btnSmallNumber = v.findViewById(R.id.btn_SmallNumber);
 
-        btnVowel = v.findViewById(R.id.btn_vowel);
-        btnConsonant = v.findViewById(R.id.btn_consonant);
-
-        btnVowel.setOnClickListener(new View.OnClickListener() {
+        btnBigNumber.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                viewModel.pickVowel();
+                viewModel.pickBigNumber();
             }
         });
 
-        btnConsonant.setOnClickListener(new View.OnClickListener() {
+        btnSmallNumber.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                viewModel.pickConsonant();
+                viewModel.pickSmallNumber();
             }
         });
+
+        tvNumberGoal.setText(String.valueOf(viewModel.pickGoalNumber(50)));
 
         return v;
     }
@@ -49,7 +54,7 @@ public class ronde3Speler2 extends Fragment {
         viewModel = new ViewModelProvider(this).get(GameViewModel.class);
 
         viewModel.getChar().observe(this, letter -> {
-            tvLetter.append(letter.toString() + " ");
+            tvNumberInput.append(letter.toString() + " ");
         });
     }
 
@@ -58,5 +63,4 @@ public class ronde3Speler2 extends Fragment {
         super.onDestroyView();
         viewModel.clearCounter();
     }
-
 }

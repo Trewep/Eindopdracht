@@ -21,7 +21,7 @@ public class ronde2Speler1 extends Fragment {
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_ronde1_speler1, container, false);
+        View v = inflater.inflate(R.layout.fragment_ronde2_speler1, container, false);
 
         tvLetter = v.findViewById(R.id.tv_letter);
 
