@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,8 +15,13 @@ import android.widget.TextView;
 public class ronde1Speler1 extends Fragment {
     TextView tvLetter;
     GameViewModel viewModel;
+    TextView countdownText;
     Button btnVowel;
     Button btnConsonant;
+    Button countdownButton;
+    CountDownTimer countDownTimer;
+    long timeLeftMillieseconds = 300000; //5 min
+    boolean timerRunning;
 
     public ronde1Speler1() {
         // Required empty public constructor
@@ -52,6 +58,9 @@ public class ronde1Speler1 extends Fragment {
         viewModel.getChar().observe(this, letter -> {
             tvLetter.append(letter.toString() + " ");
         });
+        // Code Timer
+        //countdownText = findViewById(R.id.countdown_text);
+
     }
 
     @Override
