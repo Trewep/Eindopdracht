@@ -11,6 +11,14 @@ import androidx.fragment.app.Fragment;
  * A simple {@link Fragment} subclass.
  * Use the {@link ronde2results#newInstance} factory method to
  * create an instance of this fragment.
+ * Nick Bevers09:32
+ * LetterSolver letSolver = new LetterSolver();
+ * Nick Bevers09:34
+ * letSolver.loadDictionary(requireActivity(), R.raw.dictionary);
+ * Nick Bevers09:49
+ * NumberSolver numSolver = new NumberSolver();
+ * Nick Bevers09:51
+ * numberViewModel.results.observe(getViewLifecycleOwner(), strings -> strings.forEach(string-> resultString += tv_results.getText() + "\n" + string));
  */
 public class ronde2results extends Fragment {
 
