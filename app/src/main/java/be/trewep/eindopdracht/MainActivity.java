@@ -6,11 +6,19 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    //Variables for the timer
+    TextView countdownText;
+    Button countdownButton;
+    CountDownTimer countDownTimer;
+    long timeLeftMilliseconds = 300000; //5 min
+    boolean timerRunning;
 
     Fragment currentLayout; //holds the currents fragment that's been showed on this moment
     final ronde1Speler1 ronde1Speler1 = new ronde1Speler1();
@@ -29,8 +37,20 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Code Timer when clicking on button
+        countdownText = findViewById(R.id.countdown_text);
+        countdownButton = findViewById(R.id.countdown_button);
+
+        countdownButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startStop();
+            }
+        });
 
         currentLayout = ronde1Speler1; //Starting Layout
 
@@ -76,4 +96,51 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    // Timer methods
+    public void startStop(){
+        if (timerRunning){
+            stopTimer();
+        }else{
+            startTimer();
+        }
+    }
+    //Start the timer
+    public void startTimer(){
+        //By 1000 milliseconds change or 1s
+        countDownTimer = new CountDownTimer(timeLeftMilliseconds, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timeLeftMilliseconds = millisUntilFinished;
+                updateTimer();
+            }
+            @Override
+            public void onFinish() {
+            //From here go to the anwsers???
+            }
+        }.start();
+        countdownButton.setText("STOP");
+        //From here go to the anwsers???
+        timerRunning = true;
+    }
+    //Stop the clock
+    public void stopTimer(){
+        countDownTimer.cancel();
+        countdownButton.setText("START");
+        timerRunning = false;
+    }
+    //Text timer in minutes and seconds
+    public void updateTimer(){
+        int minutes = (int) timeLeftMilliseconds / 60000;
+        int seconds = (int) timeLeftMilliseconds % 60000 / 1000;
+
+        String timeLeftText;
+
+        timeLeftText = "" + minutes;
+        timeLeftText += ":" ;
+        if(seconds < 10) timeLeftText += "0";
+        timeLeftText += seconds;
+
+        countdownText.setText(timeLeftText);
+    }
+
 }

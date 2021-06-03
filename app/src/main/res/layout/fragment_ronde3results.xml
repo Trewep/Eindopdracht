@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ronde3results">
-
     <Button
         android:id="@+id/btn_solverOplossingen"
         android:layout_width="wrap_content"
@@ -16,40 +15,65 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.89" />
+=======
+        app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> baf325cc42d3a57c6c52a4a141b48462b189fed7
 
     <TextView
         android:id="@+id/ronde"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ronde 1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <TextView
-        android:id="@+id/tVAntwoordR3S1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="148dp"
-        android:text=""
+        android:text="Ronde 3"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <TextView
+        android:id="@+id/tv_R3S1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+<<<<<<< HEAD
+        android:layout_marginBottom="148dp"
+=======
+>>>>>>> baf325cc42d3a57c6c52a4a141b48462b189fed7
+        android:text=""
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tVAntwoordR3S2"
         tools:ignore="MissingConstraints" />
+=======
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.195" />
+>>>>>>> baf325cc42d3a57c6c52a4a141b48462b189fed7
 
     <TextView
         android:id="@+id/tVAntwoordR3S2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+=======
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.382" />
+>>>>>>> baf325cc42d3a57c6c52a4a141b48462b189fed7
 
 </androidx.constraintlayout.widget.ConstraintLayout>

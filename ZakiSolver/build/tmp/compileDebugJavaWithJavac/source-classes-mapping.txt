@@ -1,0 +1,14 @@
+be/bluebanana/zakisolver/NumberSolver.java
+ be.bluebanana.zakisolver.NumberSolver
+be/bluebanana/zakisolver/LetterSolver.java
+ be.bluebanana.zakisolver.LetterSolver
+be/bluebanana/zakisolver/Node.java
+ be.bluebanana.zakisolver.Node
+ be.bluebanana.zakisolver.Node$1
+ be.bluebanana.zakisolver.Node$MathFormat
+ be.bluebanana.zakisolver.Node$Operator
+be/bluebanana/zakisolver/BuildConfig.java
+ be.bluebanana.zakisolver.BuildConfig
+be/bluebanana/zakisolver/Solver.java
+ be.bluebanana.zakisolver.Solver
+ be.bluebanana.zakisolver.Solver$SolverResultCallback
