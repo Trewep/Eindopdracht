@@ -13,15 +13,10 @@
         android:text="andere oplossingen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-<<<<<<< HEAD
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.894" />
-=======
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
->>>>>>> baf325cc42d3a57c6c52a4a141b48462b189fed7
+        app:layout_constraintVertical_bias="0.894"
+        app:layout_constraintHorizontal_bias="0.5"/>
 
     <TextView
         android:id="@+id/ronde"
@@ -52,10 +47,7 @@
         android:id="@+id/tVAntwoordR2S2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
         android:layout_marginStart="64dp"
-=======
->>>>>>> baf325cc42d3a57c6c52a4a141b48462b189fed7
         android:text=""
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -63,10 +55,6 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-<<<<<<< HEAD
         tools:ignore="MissingConstraints" />
-=======
-        app:layout_constraintVertical_bias="0.382" />
->>>>>>> baf325cc42d3a57c6c52a4a141b48462b189fed7
 
 </androidx.constraintlayout.widget.ConstraintLayout>
