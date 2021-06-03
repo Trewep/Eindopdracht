@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 public class ronde1Speler2 extends Fragment {
-    private static String word2;
     TextView tvLetter;
     GameViewModel viewModel;
     Button btnVowel;
@@ -39,7 +38,8 @@ public class ronde1Speler2 extends Fragment {
                 if(mEditTextR1S2.getText().toString().length() == 0){
                     mEditTextR1S2.setText("Answer");
                 }
-                word2 = mEditTextR1S2.getText().toString();
+
+                String word2 = mEditTextR1S2.getText().toString();
 
                 mTextViewResult.setText(word2);
 
@@ -80,9 +80,6 @@ public class ronde1Speler2 extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         viewModel.clearCounter();
-    }
-    public static String getWord2() {
-        return word2;
     }
 
 }

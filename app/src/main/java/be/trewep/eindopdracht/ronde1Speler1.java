@@ -14,7 +14,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class ronde1Speler1 extends Fragment {
-    private static String word1;
     TextView tvLetter;
     GameViewModel viewModel;
     Button btnVowel;
@@ -43,7 +42,7 @@ public class ronde1Speler1 extends Fragment {
                 if(mEditTextR1S1.getText().toString().length() == 0){
                     mEditTextR1S1.setText("Answer");
                 }
-                word1 = mEditTextR1S1.getText().toString();
+                String word1 = mEditTextR1S1.getText().toString();
 
                 mTextViewResult.setText(word1);
 
@@ -84,8 +83,5 @@ public class ronde1Speler1 extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         viewModel.clearCounter();
-    }
-    public static String getWord1() {
-        return word1;
     }
 }
