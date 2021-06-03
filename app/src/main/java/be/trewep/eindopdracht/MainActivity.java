@@ -44,9 +44,7 @@ public class MainActivity extends AppCompatActivity {
         btnChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d("currentLayout", String.valueOf(currentLayout));
-                Log.d("r1s1", String.valueOf(ronde1Speler1));
-                Log.d("r1s2", String.valueOf(ronde1Speler2));
+                //Log.d("currentLayout", String.valueOf(currentLayout));
                 if (currentLayout == ronde1Speler1) {
                     currentLayout = ronde1Speler2;
                 }else if (currentLayout == ronde1Speler2){
