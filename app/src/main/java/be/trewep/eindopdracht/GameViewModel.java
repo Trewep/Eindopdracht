@@ -1,5 +1,8 @@
 package be.trewep.eindopdracht;
 
+import android.util.Log;
+
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -7,7 +10,10 @@ import java.util.Random;
 
 public class GameViewModel extends ViewModel {
     private MutableLiveData<CharSequence> character;
+    public MutableLiveData<CharSequence> string1 = new MutableLiveData<>();
     private int counter = 0;
+
+    //Results
 
     MutableLiveData<CharSequence> getChar() {
         if (character == null) {

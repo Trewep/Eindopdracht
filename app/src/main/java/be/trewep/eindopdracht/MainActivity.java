@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -17,10 +18,11 @@ public class MainActivity extends AppCompatActivity {
     TextView countdownText;
     Button countdownButton;
     CountDownTimer countDownTimer;
-    long timeLeftMilliseconds = 300000; //5 min
+    long timeLeftMilliseconds = 60000; //5 min
     boolean timerRunning;
 
-    Fragment currentLayout; //holds the currents fragment that's been showed on this moment
+    //Fragments showing
+    Fragment currentLayout; //Holds the currents fragment that's been showed on this moment
     final ronde1Speler1 ronde1Speler1 = new ronde1Speler1();
     final ronde1Speler2 ronde1Speler2 = new ronde1Speler2();
     final ronde1results ronde1results = new ronde1results();
@@ -35,13 +37,14 @@ public class MainActivity extends AppCompatActivity {
 
     final gameresults gameresults = new gameresults();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Code Timer when clicking on button
+        //Code Timer when clicking on button
         countdownText = findViewById(R.id.countdown_text);
         countdownButton = findViewById(R.id.countdown_button);
 
@@ -52,15 +55,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Layout Manager
         currentLayout = ronde1Speler1; //Starting Layout
 
-        Button btnChange = findViewById(R.id.btn_switch); //button to change between fragments
+        Button btnChange = findViewById(R.id.btn_switch); //Button to change between fragments
 
-        FragmentManager fm = getSupportFragmentManager(); //initialize fragment manager
+        FragmentManager fm = getSupportFragmentManager(); //Initialize fragment manager
         FragmentTransaction ft = fm.beginTransaction();
-        ft.replace(R.id.fragmentSpot, currentLayout); //replace starting fragment with ronde1Speler1Fragment
+        ft.replace(R.id.fragmentSpot, currentLayout); //Replace starting fragment with ronde1Speler1Fragment
         ft.commit();
 
+        //Switch button
         btnChange.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,7 +101,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    // Timer methods
+
+    //Timer methods
     public void startStop(){
         if (timerRunning){
             stopTimer();

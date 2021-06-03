@@ -1,6 +1,7 @@
 package be.trewep.eindopdracht;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+
+import static android.content.ContentValues.TAG;
 
 public class ronde1Speler2 extends Fragment {
     TextView tvLetter;
@@ -31,6 +34,7 @@ public class ronde1Speler2 extends Fragment {
         mEditTextR1S2 = v.findViewById(R.id.AnswerR1S2);
         mTextViewResult = v.findViewById(R.id.tv_AnswerR1S2);
         mButtonSend = v.findViewById(R.id.btn_SendR1S2);
+        Log.d(TAG, "ViewModel Speler 2:"+ viewModel.string1.getValue());
 
         mButtonSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,9 +43,9 @@ public class ronde1Speler2 extends Fragment {
                     mEditTextR1S2.setText("Answer");
                 }
 
-                String word2 = mEditTextR1S2.getText().toString();
 
-                mTextViewResult.setText(word2);
+                //viewModel.word2 = mEditTextR1S2.getText().toString();
+               // mTextViewResult.setText(word2);
 
             }
         });
