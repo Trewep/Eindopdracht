@@ -14,11 +14,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class ronde1Speler1 extends Fragment {
+    private static String word1;
     TextView tvLetter;
     GameViewModel viewModel;
     Button btnVowel;
     Button btnConsonant;
-    EditText mEditTextRS1;
+    //To save text
+    EditText mEditTextR1S1;
     TextView mTextViewResult;
     Button mButtonSend;;
 
@@ -31,17 +33,17 @@ public class ronde1Speler1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_ronde1_speler1, container, false);
 
-        mEditTextRS1 = v.findViewById(R.id.AnswerR1S1);
+        mEditTextR1S1 = v.findViewById(R.id.AnswerR1S1);
         mTextViewResult = v.findViewById(R.id.tv_AnswerR1S1);
-        mButtonSend = v.findViewById(R.id.btn_send);
+        mButtonSend = v.findViewById(R.id.btn_SendR1S1);
 
         mButtonSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(mEditTextRS1.getText().toString().length() == 0){
-                    mEditTextRS1.setText("Anwser");
+                if(mEditTextR1S1.getText().toString().length() == 0){
+                    mEditTextR1S1.setText("Answer");
                 }
-                String word1 = mEditTextRS1.getText().toString();
+                word1 = mEditTextR1S1.getText().toString();
 
                 mTextViewResult.setText(word1);
 
@@ -83,5 +85,7 @@ public class ronde1Speler1 extends Fragment {
         super.onDestroyView();
         viewModel.clearCounter();
     }
-
+    public static String getWord1() {
+        return word1;
+    }
 }

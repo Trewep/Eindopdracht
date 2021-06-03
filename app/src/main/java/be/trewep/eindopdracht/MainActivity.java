@@ -115,11 +115,11 @@ public class MainActivity extends AppCompatActivity {
             }
             @Override
             public void onFinish() {
-            //From here go to the anwsers???
+            //From here go to the answers???
             }
         }.start();
         countdownButton.setText("STOP");
-        //From here go to the anwsers???
+        //From here go to the answers???
         timerRunning = true;
     }
     //Stop the clock
