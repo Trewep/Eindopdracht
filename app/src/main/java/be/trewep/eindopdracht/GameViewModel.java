@@ -9,11 +9,14 @@ import androidx.lifecycle.ViewModel;
 import java.util.Random;
 
 public class GameViewModel extends ViewModel {
-    private MutableLiveData<CharSequence> character;
-    public MutableLiveData<CharSequence> string1 = new MutableLiveData<>();
+    private MutableLiveData<CharSequence> character = new MutableLiveData<>();
+    public String string1;
+    public String string2;
+    public String string3;
+    public String string4;
+    public Integer int1;
+    public Integer int2;
     private int counter = 0;
-
-    //Results
 
     MutableLiveData<CharSequence> getChar() {
         if (character == null) {

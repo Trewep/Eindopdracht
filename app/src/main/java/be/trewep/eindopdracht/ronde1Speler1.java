@@ -17,28 +17,35 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class ronde1Speler1 extends Fragment {
+    //Letter
     TextView tvLetter;
     GameViewModel viewModel;
     Button btnVowel;
     Button btnConsonant;
-
+    //Result
     EditText mEditTextR1S1;
-    TextView mTextViewResult;
     Button mButtonSend;
-
-    ronde1results viewModel2;
 
     public ronde1Speler1() {
         // Required empty public constructor
     }
+    //Letter
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        viewModel = new ViewModelProvider(requireActivity()).get(GameViewModel.class);
+
+        viewModel.getChar().observe(this, letter -> {
+            tvLetter.append(letter.toString() + " ");
+        });
+    }
+    //Result
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_ronde1_speler1, container, false);
-        viewModel = new ViewModelProvider(requireActivity()).get(GameViewModel.class);
+
         mEditTextR1S1 = v.findViewById(R.id.AnswerR1S1);
         mButtonSend = v.findViewById(R.id.btn_SendR1S1);
-
-        mTextViewResult = v.findViewById(R.id.tv_AnswerR1S1);
 
         mButtonSend.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,12 +53,11 @@ public class ronde1Speler1 extends Fragment {
                 if(mEditTextR1S1.getText().toString().length() == 0){
                     mEditTextR1S1.setText("");
                 }
-                Log.d("Log Value: ", mEditTextR1S1.getText().toString());
-                viewModel.string1.setValue(mEditTextR1S1.getText().toString());
-               // mTextViewResult.setText(word1);
+                //Send Result to Resultpage
+                viewModel.string1 = mEditTextR1S1.getText().toString();
             }
         });
-
+        //Letter Code
         tvLetter = v.findViewById(R.id.tv_letter);
 
         btnVowel = v.findViewById(R.id.btn_vowel);
@@ -70,16 +76,6 @@ public class ronde1Speler1 extends Fragment {
         });
 
         return v;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        viewModel = new ViewModelProvider(this).get(GameViewModel.class);
-
-        viewModel.getChar().observe(this, letter -> {
-            tvLetter.append(letter.toString() + " ");
-        });
     }
 
     @Override

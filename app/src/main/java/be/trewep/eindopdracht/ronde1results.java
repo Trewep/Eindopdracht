@@ -33,13 +33,11 @@ public class ronde1results extends Fragment {
         viewModel = new ViewModelProvider(requireActivity()).get(GameViewModel.class);
         mTextViewResultS1 = v.findViewById(R.id.tv_ResultR1S1);
         mTextViewResultS2 = v.findViewById(R.id.tv_ResultR1S2);
-        Log.d(TAG, "PLAYER 1 STRING:" + viewModel.string1.getValue());
 
         //array.append(viewModel.string1.getValue());
         //viewModel.string1.setValue());
-        mTextViewResultS1.setText(viewModel.string1.getValue());
-        //mTextViewResultS2.setText(viewModel.word2);
-
+        mTextViewResultS1.setText(viewModel.string1);
+        mTextViewResultS2.setText(viewModel.string2);
         return v;
     }
 

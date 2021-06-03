@@ -102,7 +102,7 @@
 
 
     <EditText
-        android:id="@+id/AnswerR1S2"
+        android:id="@+id/AnswerR3S1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -116,7 +116,7 @@
         app:layout_constraintVertical_bias="0.756" />
 
     <Button
-        android:id="@+id/btn_SendR1S2"
+        android:id="@+id/btn_SendR3S1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#D00101"

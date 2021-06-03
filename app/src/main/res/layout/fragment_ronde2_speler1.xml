@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ronde2Speler1">
 
+
     <TextView
         android:id="@+id/ronde"
         android:layout_width="wrap_content"
@@ -20,7 +21,7 @@
         app:layout_constraintVertical_bias="0.044" />
 
     <TextView
-        android:id="@+id/speler2"
+        android:id="@+id/speler1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -73,19 +74,6 @@
         app:layout_constraintVertical_bias="0.427" />
 
     <TextView
-        android:id="@+id/tv_AnswerR1S1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.592" />
-
-    <TextView
         android:id="@+id/tv_label_Answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -96,10 +84,10 @@
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.695" />
+        app:layout_constraintVertical_bias="0.606" />
 
     <EditText
-        android:id="@+id/AnswerR1S1"
+        android:id="@+id/AnswerR2S1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -107,13 +95,13 @@
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.756" />
+        app:layout_constraintVertical_bias="0.718" />
 
     <Button
-        android:id="@+id/btn_SendR1S1"
+        android:id="@+id/btn_SendR2S1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#D00101"

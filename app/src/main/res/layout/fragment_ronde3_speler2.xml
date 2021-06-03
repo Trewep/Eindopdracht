@@ -127,7 +127,7 @@
         app:layout_constraintVertical_bias="0.756" />
 
     <Button
-        android:id="@+id/btn_send"
+        android:id="@+id/btn_SendR3S2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#D00101"
