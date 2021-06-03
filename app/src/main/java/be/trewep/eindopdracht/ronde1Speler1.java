@@ -34,7 +34,7 @@ public class ronde1Speler1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_ronde1_speler1, container, false);
-
+        viewModel = new ViewModelProvider(requireActivity()).get(GameViewModel.class);
         mEditTextR1S1 = v.findViewById(R.id.AnswerR1S1);
         mButtonSend = v.findViewById(R.id.btn_SendR1S1);
 
@@ -47,7 +47,7 @@ public class ronde1Speler1 extends Fragment {
                     mEditTextR1S1.setText("");
                 }
                 Log.d("Log Value: ", mEditTextR1S1.getText().toString());
-                //viewModel.string1.setValue(mEditTextR1S1.getText().toString());
+                viewModel.string1.setValue(mEditTextR1S1.getText().toString());
                // mTextViewResult.setText(word1);
             }
         });

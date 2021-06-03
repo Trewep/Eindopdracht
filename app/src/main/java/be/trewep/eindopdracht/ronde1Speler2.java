@@ -30,7 +30,7 @@ public class ronde1Speler2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_ronde1_speler2, container, false);
-
+        viewModel = new ViewModelProvider(requireActivity()).get(GameViewModel.class);
         mEditTextR1S2 = v.findViewById(R.id.AnswerR1S2);
         mTextViewResult = v.findViewById(R.id.tv_AnswerR1S2);
         mButtonSend = v.findViewById(R.id.btn_SendR1S2);

@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
+
+import static android.content.ContentValues.TAG;
 
 public class ronde1results extends Fragment {
     TextView mTextViewResultS1;
@@ -27,14 +30,16 @@ public class ronde1results extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_ronde1results, container, false);
+        viewModel = new ViewModelProvider(requireActivity()).get(GameViewModel.class);
         mTextViewResultS1 = v.findViewById(R.id.tv_ResultR1S1);
         mTextViewResultS2 = v.findViewById(R.id.tv_ResultR1S2);
+        Log.d(TAG, "PLAYER 1 STRING:" + viewModel.string1.getValue());
 
-/*
-        mTextViewResultS1.setText(viewModel.word1);
-        mTextViewResultS2.setText(viewModel.word2);
+        //array.append(viewModel.string1.getValue());
+        //viewModel.string1.setValue());
+        mTextViewResultS1.setText(viewModel.string1.getValue());
+        //mTextViewResultS2.setText(viewModel.word2);
 
- */
         return v;
     }
 
