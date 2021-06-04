@@ -1,6 +1,7 @@
 package be.trewep.eindopdracht;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +53,7 @@ public class ronde3Speler2 extends Fragment {
                 }
                 //Send Result to Resultpage
                 viewModel.string6 = mEditTextR3S2.getText().toString();
+                Log.d("string6",viewModel.string6 );
             }
         });
         //Cijfer

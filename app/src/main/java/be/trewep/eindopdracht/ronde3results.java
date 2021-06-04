@@ -37,6 +37,7 @@ public class ronde3results extends Fragment {
         //array.append(viewModel.string1.getValue());
         //viewModel.string1.setValue());
         mTextViewResultS1.setText(viewModel.string5);
+        //Log.d("string6",viewModel.string6 );
         mTextViewResultS2.setText(viewModel.string6);
         return v;
     }
