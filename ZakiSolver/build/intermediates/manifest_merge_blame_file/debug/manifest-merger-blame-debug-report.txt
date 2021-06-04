@@ -4,8 +4,8 @@
 4
 5    <uses-sdk
 6        android:minSdkVersion="24"
-6-->C:\Users\Ward\Desktop\Mobile\Eindopdracht\ZakiSolver\src\main\AndroidManifest.xml
+6-->C:\Users\deflu\Google Drive\Thomas More\2020-2021\Devop adv mobile\Eindopdracht\ZakiSolver\src\main\AndroidManifest.xml
 7        android:targetSdkVersion="30" />
-7-->C:\Users\Ward\Desktop\Mobile\Eindopdracht\ZakiSolver\src\main\AndroidManifest.xml
+7-->C:\Users\deflu\Google Drive\Thomas More\2020-2021\Devop adv mobile\Eindopdracht\ZakiSolver\src\main\AndroidManifest.xml
 8
 9</manifest>

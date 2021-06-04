@@ -83,4 +83,5 @@ public class ronde1Speler1 extends Fragment {
         super.onDestroyView();
         viewModel.clearCounter();
     }
+
 }

@@ -14,8 +14,8 @@ public class GameViewModel extends ViewModel {
     public String string2;
     public String string3;
     public String string4;
-    public Integer int1;
-    public Integer int2;
+    public String string5;
+    public String string6;
     private int counter = 0;
 
     MutableLiveData<CharSequence> getChar() {
@@ -108,4 +108,5 @@ public class GameViewModel extends ViewModel {
         int rndNumber = random.nextInt(limit) + 1;
         return rndNumber;
     }
+
 }

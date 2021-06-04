@@ -52,7 +52,7 @@ public class ronde3Speler1 extends Fragment {
                     mEditTextR3S1.setText("");
                 }
                 //Send Result to Resultpage
-                viewModel.int1 = Integer.valueOf(mEditTextR3S1.getText().toString());
+                viewModel.string5 = mEditTextR3S1.getText().toString();
             }
         });
         //Cijfer
@@ -73,7 +73,7 @@ public class ronde3Speler1 extends Fragment {
             }
         });
 
-        tvNumberGoal.setText(String.valueOf(viewModel.pickGoalNumber(50)));
+        tvNumberGoal.setText(String.valueOf(viewModel.pickGoalNumber(1000)));
 
         return v;
     }

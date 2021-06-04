@@ -45,8 +45,8 @@ public class gameresults extends Fragment {
         mTextViewResultR1S2.setText(viewModel.string2);
         mTextViewResultR2S1.setText(viewModel.string3);
         mTextViewResultR2S2.setText(viewModel.string4);
-        mTextViewResultR3S1.setText(viewModel.int1.toString());
-        mTextViewResultR3S2.setText(viewModel.int2.toString());
+        mTextViewResultR3S1.setText(viewModel.string5);
+        mTextViewResultR3S2.setText(viewModel.string6);
         return v;
     }
 }
